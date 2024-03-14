@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class Villager : MonoBehaviour
     bool isSelected;
     public GameObject highlight;
 
-    Vector2 destination;
+    protected Vector2 destination;
     Vector2 movement;
     float speed = 3;
 
@@ -80,7 +81,7 @@ public class Villager : MonoBehaviour
         }
     }
 
-    void Attack()
+    protected virtual void Attack()
     {
         animator.SetTrigger("Attack");
     }
