@@ -13,7 +13,6 @@ public class Archer : Villager
         destination = transform.position;
         base.Attack();
         Invoke("SpawnArrow",delay);
-        
     }
 
     void SpawnArrow()
