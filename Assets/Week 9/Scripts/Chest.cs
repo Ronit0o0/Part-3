@@ -11,12 +11,11 @@ public class Chest : MonoBehaviour
     {
         if(collision.TryGetComponent<Villager>(out Villager villager))
         {
-            if (villager.CanOpen() == whoCanOpen || whoCanOpen == ChestType.Villager)
+            if(villager.CanOpen() == whoCanOpen || whoCanOpen == ChestType.Villager)
             {
                 animator.SetBool("IsOpened", true);
             }
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
