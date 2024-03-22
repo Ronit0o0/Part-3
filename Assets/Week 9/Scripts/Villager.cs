@@ -29,10 +29,10 @@ public class Villager : MonoBehaviour
         highlight.SetActive(isSelected);
     }
 
-    private void OnMouseDown()
+   private void OnMouseDown()
     {
-        CharacterControl.SetSelectedVillager(this);
-        clickingOnSelf = true;
+    //CharacterControl.SetSelectedVillager(this);
+    //clickingOnSelf = true;
     }
 
     private void OnMouseUp()
