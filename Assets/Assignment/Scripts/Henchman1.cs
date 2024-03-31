@@ -5,6 +5,5 @@ using UnityEngine;
 
 public class Henchman1 : EnemyMovement
 {
- 
 
 }

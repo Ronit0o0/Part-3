@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform plyr;
+    public GameObject projectile;
     private float speed = 3f;
     // Start is called before the first frame update
     void Start()
@@ -16,5 +19,12 @@ public class PlayerMovement : MonoBehaviour
     {
         float keyboardInput = Input.GetAxis("Vertical");
         transform.Translate(0, keyboardInput * speed * Time.deltaTime, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectile, plyr.position, plyr.rotation);
+        }
     }
+
+    
 }
